@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>01-big-picture-llm-pipeline</title>
+  <!-- H5P CSS from CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/h5p-standalone@latest/dist/styles/h5p.css" />
+</head>
+
+<body>
+  <div id="h5p-container"></div>
+
+  <!-- H5P JS bundles from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/h5p-standalone@latest/dist/main.bundle.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const options = {
+        h5pJsonPath: "./01-big-picture-llm-pipeline",
+        frameJs: 'https://cdn.jsdelivr.net/npm/h5p-standalone@latest/dist/frame.bundle.js',
+        frameCss: 'https://cdn.jsdelivr.net/npm/h5p-standalone@latest/dist/styles/h5p.css',
+        librariesPath: '../shared-libraries/',
+        customCss: [
+          '../assets/quartz-h5p.css'
+        ],
+        frame: true,
+        copyright: true,
+        export: false,
+      };
+
+      const el = document.getElementById("h5p-container");
+
+      new H5PStandalone.H5P(el, options);
+    });
+  </script>
+
+</body>
+
+</html>
