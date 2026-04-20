@@ -31,11 +31,11 @@ Each activity can be embedded as a standalone HTML page:
 
 ```html
 <iframe
-  src="https://your-site.example/h5p/html/quiz-1.html"
+  src="https://github-page-url/folder-name/file-name.html"
   width="100%"
   height="700"
   frameborder="0"
-  title="H5P activity"
+  title="Activity Name"
 >
 </iframe>
 ```
