@@ -1,5 +1,5 @@
 :root {
-  --h5p-bg: #f8250000;
+  --h5p-bg: #faf8f8;
   --h5p-fg: #000000;
   --h5p-muted: #6b7280;
   --h5p-border: #e5e7eb;
@@ -8,13 +8,13 @@
   --h5p-font: system-ui, sans-serif;
 }
 
-/* html, body {
+html, body {
   background: var(--h5p-bg);
-  color: var(--h5p-fg);
-  font-family: var(--h5p-font);
-} */
+  margin: 0;
+  padding: 0;
+}
 
-.h5p-content {
+.h5p-content .h5p-drag-text {
     font-family: var(--h5p-font);
     background: var(--h5p-bg);
     color: var(--h5p-fg);
