@@ -8,18 +8,17 @@
   --h5p-font: system-ui, sans-serif;
 }
 
-html, body {
-  background: var(--h5p-bg);
-  margin: 0;
-  padding: 0;
-}
-
-.h5p-content .h5p-drag-text {
-    font-family: var(--h5p-font);
-    background: var(--h5p-bg);
-    color: var(--h5p-fg);
-}
-
 a {
-    color: var(--h5p-accent);
+  color: var(--h5p-accent);
+}
+
+html,
+body,
+#h5p-container,
+.h5p-content,
+#h5p-question,
+.h5p-question {
+  background: var(--h5p-bg) !important;
+  color: var(--h5p-fg);
+  font-family: var(--h5p-font);
 }
