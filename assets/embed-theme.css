@@ -22,3 +22,8 @@ body,
   color: var(--h5p-fg);
   font-family: var(--h5p-font);
 }
+
+.h5p-sort-paragraphs,
+.h5p-sort-paragraphs-paragraph {
+  background: var(--h5p-border) !important;
+}
