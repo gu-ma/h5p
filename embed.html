@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>H5P Activity</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/h5p-standalone@3.8.2/dist/styles/h5p.css" />
+  <link rel="stylesheet" href="./assets/embed-theme.css" />
+  <script src="./assets/embed-theme.js" defer></script>
+
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--h5p-bg);
+      color: var(--h5p-fg);
+      font-family: var(--h5p-font);
+    }
+
+    #h5p-container {
+      width: 100%;
+    }
+
+    .embed-error {
+      max-width: 60rem;
+      margin: 2rem auto;
+      padding: 1rem 1.25rem;
+      border: 1px solid var(--h5p-border);
+      border-radius: var(--h5p-radius);
+      background: var(--h5p-bg);
+      color: var(--h5p-fg);
+    }
+
+    .embed-error code {
+      word-break: break-all;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="h5p-container"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/h5p-standalone@3.8.2/dist/main.bundle.js"></script>
+
+  <script>
+    function normalizeActivityPath(raw) {
+      if (!raw) return null;
+
+      let value = raw.trim();
+
+      try {
+        value = decodeURIComponent(value);
+      } catch { }
+
+      value = value.replace(/^\/+/, "");
+      value = value.replace(/\.html$/i, "");
+      value = value.replace(/\/+$/, "");
+
+      if (!value) return null;
+
+      // basic safety: keep paths relative and simple
+      if (value.includes("..")) return null;
+
+      return value;
+    }
+
+    function showError(message, detail) {
+      const el = document.getElementById("h5p-container");
+      el.innerHTML = `
+        <div class="embed-error">
+          <strong>${message}</strong>
+          ${detail ? `<p><code>${detail}</code></p>` : ""}
+        </div>
+      `;
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const params = new URLSearchParams(window.location.search);
+      const activity = normalizeActivityPath(params.get("activity"));
+
+      if (!activity) {
+        showError(
+          "Missing activity parameter.",
+          "Use embed.html?activity=block-ai-text-generation/01-big-picture-llm-pipeline"
+        );
+        return;
+      }
+
+      document.title = activity.split("/").pop();
+
+      const options = {
+        h5pJsonPath: `./${activity}`,
+        frameJs: "https://cdn.jsdelivr.net/npm/h5p-standalone@3.8.2/dist/frame.bundle.js",
+        frameCss: "https://cdn.jsdelivr.net/npm/h5p-standalone@3.8.2/dist/styles/h5p.css",
+        librariesPath: "./shared-libraries/",
+        customCss: [
+          "./assets/embed-theme.css"
+        ],
+        frame: true,
+        copyright: true,
+        export: false,
+      };
+
+      const el = document.getElementById("h5p-container");
+
+      try {
+        new H5PStandalone.H5P(el, options);
+      } catch (err) {
+        console.error(err);
+        showError("Could not load H5P activity.", activity);
+      }
+    });
+  </script>
+</body>
+
+</html>
