@@ -35,7 +35,7 @@ body,
 
 /* 03-from-base-model-to-assistant */
 .h5p-sc-progressbar {
-    background-color: var(--h5p-accent) !important;
+    background-color: var(--h5p-muted) !important;
 }
 
 li.h5p-sc-alternative {
