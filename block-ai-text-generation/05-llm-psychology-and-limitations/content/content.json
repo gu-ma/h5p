@@ -1,0 +1,90 @@
+{
+    "panels": [
+        {
+            "content": {
+                "params": {
+                    "text": "<p>LLMs generate text token by token. This means:</p>\n\n<p>- complex reasoning often needs intermediate steps<br />\n- rushed outputs can reduce quality<br />\n- prompt wording can strongly affect behavior</p>\n"
+                },
+                "library": "H5P.AdvancedText 1.1",
+                "subContentId": "9cfdb6d7-0ab0-4635-bf12-66cfe799c16d",
+                "metadata": {
+                    "contentType": "Text",
+                    "license": "U",
+                    "title": "Untitled Text",
+                    "authors": [],
+                    "changes": []
+                }
+            },
+            "title": "Token-level cognition"
+        },
+        {
+            "content": {
+                "params": {
+                    "text": "<p>Common problems include:</p>\n\n<p>- overconfident errors<br />\n- counting or character mistakes<br />\n- format drift<br />\n- identity confusion<br />\n"
+                },
+                "library": "H5P.AdvancedText 1.1",
+                "subContentId": "d3f56324-4391-435a-9cbc-304a52509246",
+                "metadata": {
+                    "contentType": "Text",
+                    "license": "U",
+                    "title": "Untitled Text",
+                    "authors": [],
+                    "changes": []
+                }
+            },
+            "title": "Typical failure patterns"
+        },
+        {
+            "content": {
+                "params": {
+                    "text": "<p>We should treat LLMs as:</p>\n\n<p>- useful collaborators<br />\n- not authoritative sources<br />\n- systems with uneven reliability across tasks</p>\n"
+                },
+                "library": "H5P.AdvancedText 1.1",
+                "subContentId": "2c0de232-573f-44c8-b03c-169a0538c873",
+                "metadata": {
+                    "contentType": "Text",
+                    "license": "U",
+                    "title": "Untitled Text",
+                    "authors": [],
+                    "changes": []
+                }
+            },
+            "title": "Why this matters"
+        },
+        {
+            "content": {
+                "params": {
+                    "text": "<p>To improve results:</p>\n\n<p>- ask for stepwise reasoning when needed<br />\n- define output format clearly<br />\n- ask for confidence or uncertainty<br />\n- include reference material in context<br />\n"
+                },
+                "library": "H5P.AdvancedText 1.1",
+                "subContentId": "e8746570-bd11-4486-a4c9-691420615413",
+                "metadata": {
+                    "contentType": "Text",
+                    "license": "U",
+                    "title": "Untitled Text",
+                    "authors": [],
+                    "changes": []
+                }
+            },
+            "title": "Better prompting for reliability"
+        },
+        {
+            "content": {
+                "params": {
+                    "text": "<p>LLMs are powerful but jagged tools. Success comes from combining:</p>\n\n<p>- good prompt design<br />\n- task-aware verification<br />\n- human judgment</p>\n"
+                },
+                "library": "H5P.AdvancedText 1.1",
+                "subContentId": "56aea37d-2e25-4136-92e4-7fa5bb803612",
+                "metadata": {
+                    "contentType": "Text",
+                    "license": "U",
+                    "title": "Untitled Text",
+                    "authors": [],
+                    "changes": []
+                }
+            },
+            "title": "Takeway"
+        }
+    ],
+    "hTag": "h2"
+}
