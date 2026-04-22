@@ -41,3 +41,8 @@ body,
 li.h5p-sc-alternative {
     background-color: var(--h5p-border) !important;
 }
+
+/* 04-llm-psychology-and-limitations */
+.h5p-accordion .h5p-panel-title {
+    color: var(--h5-fg) !important;
+}
